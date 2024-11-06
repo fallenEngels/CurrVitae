@@ -61,7 +61,7 @@ tribble(
   ~Type, ~Name, ~Source, ~Date,
   "Python", "CS50P", "Harvard University", "2023",
   "R", "Data Science", "Harvard University", "2020",
-  "Language", "English C1", "LAL Language Schools", "2015"
+  "Language", "English C1", "LAL Language Schools", "2014"
 ) %>% 
   detailed_entries(Source, Date, Name, Type)
 ```
