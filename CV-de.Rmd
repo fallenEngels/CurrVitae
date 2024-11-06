@@ -1,0 +1,77 @@
+---
+name: Johannes
+surname: Engels
+position: "Forscher"
+address: Stuttgart, Deutschland
+# www: https://github.com/fallenEngels
+email: "johannes.engels@eni.uni-stuttgart.de"
+github: fallenEngels
+linkedin: johannes-engels
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
+library(vitae)
+```
+
+# Areitsverhältnis
+
+```{r}
+library(tibble)
+tribble(
+  ~ Role, ~ Company, ~ Location, ~ Dates, ~ Details,
+  "Wiss. Mitarbeiter", "2023 - Present", "Universität Stuttgart", "Stuttgart, Deutschland", list(
+    "Forschung zu Nascent Entrepreneurship, Entrepreneurial Ecosystems und Venture Impact", 
+    "Lehre zu statistischen \\& Forschungsmethoden",
+    "Kommunikation von Forschungsergebnissen zu öffentlichen und politischen Stakeholdern"
+  ),
+  "Stud. Hilfskraft", "2020 - 2023", "Universität Stuttgart", "Stuttgart, Deutschland", list(
+    "Tutor für \\emph{Computational Social Sciences} und \\emph{Statistische Forschungsmethoden}, Institut für Sozialwissenschaften",
+    "Tutor für \\emph{Entrepreneurship Research Methods}, Institut für Entrepreneurship und Innovationsforschung"
+  ),
+  "Pflegehelfer", "2015 - 2018, 2019", "Rems-Murr-Klinikum", "Winnenden, Deutschland", list(
+    "Pflegehelfer auf Abteilunng für Neurologie und Stroke Unit"
+  )
+) %>% 
+  detailed_entries(Role, Dates, Company, Location, Details)
+```
+
+# Ausbildung
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "M.A. Empirische Politik und Sozialforschung", "2021-2023", "Universität Stuttgart", "Stuttgart, Deutschland",
+  "B.A. Sozialwissenschaften", "2016-2021", "Universität Stuttgart", "Stuttgart, Deutschland",
+  "Abitur", "2007-2015", "Lessing-Gymnasium Winnenden", "Winnenden, Deutschland"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Zertifikate
+
+```{r}
+tribble(
+  ~Type, ~Name, ~Source, ~Date,
+  "Python", "CS50P", "Harvard University", "2023",
+  "R", "Data Science", "Harvard University", "2020",
+  "Sprache", "English C1", "LAL Language Schools", "2015"
+) %>% 
+  detailed_entries(Source, Date, Name, Type)
+```
+
+# Publicationen
+
+## Wissenschaftliche Publikationen
+
+Für eine zentralisierte Liste, siehe ORCiD: https://orcid.org/0000-0002-2885-8063
+
+## Nicht-wissenschaftliche Publikationen
+
+

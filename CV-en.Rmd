@@ -1,0 +1,77 @@
+---
+name: Johannes
+surname: Engels
+position: "Researcher"
+address: Stuttgart, Germany
+# www: https://github.com/fallenEngels
+email: "johannes.engels@eni.uni-stuttgart.de"
+github: fallenEngels
+linkedin: johannes-engels
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
+library(vitae)
+```
+
+# Employment
+
+```{r}
+library(tibble)
+tribble(
+  ~ Role, ~ Company, ~ Location, ~ Dates, ~ Details,
+  "Research associate", "2023 - Present", "University of Stuttgart", "Stuttgart, Germany", list(
+    "Research on Nascent Entrepreneurship, Entrepreneurial Ecosystems and Venture Impact", 
+    "Teaching statistical \\& research methods",
+    "Communication of research findings to public and political stakeholders"
+  ),
+  "Student assistant", "2020 - 2023", "University of Stuttgart", "Stuttgart, Germany", list(
+    "Tutor for \\emph{Computational Social Sciences} and \\emph{Statistical Research Methods} at Institute of Social Sciences",
+    "Tutor for \\emph{Entrepreneurship Research Methods} at Institute of Entrepreneurship and Innovation Sciences"
+  ),
+  "Assistant nurse", "2015 - 2018, 2019", "Rems-Murr-Klinikum", "Winnenden, Germany", list(
+    "Assistant nurse at the Neurological unit and Stroke unit"
+  )
+) %>% 
+  detailed_entries(Role, Dates, Company, Location, Details)
+```
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "M.A. Empirical Political and Social Sciences", "2021-2023", "University of Stuttgart", "Stuttgart, Germany",
+  "B.A. Social Sciences", "2016-2021", "University of Stuttgart", "Stuttgart, Germany",
+  "Abitur", "2007-2015", "Lessing-Gymnasium Winnenden", "Winnenden, Germany"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Certificates
+
+```{r}
+tribble(
+  ~Type, ~Name, ~Source, ~Date,
+  "Python", "CS50P", "Harvard University", "2023",
+  "R", "Data Science", "Harvard University", "2020",
+  "Language", "English C1", "LAL Language Schools", "2015"
+) %>% 
+  detailed_entries(Source, Date, Name, Type)
+```
+
+# Publications
+
+## Scientific publications
+
+For a centralized list, see ORCiD: https://orcid.org/0000-0002-2885-8063
+
+## Non-scientific publications
+
+
